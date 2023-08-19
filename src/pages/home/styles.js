@@ -1,10 +1,10 @@
 import styled from "styled-components";
-// import banner from "../../../public/assets/one.jpg";
+import banner from "../../../public/assets/one.jpg";
 
 export const Container = styled.div`
   height: 100vh;
   width: 100%;
-  background-image: url("/public/assets/one.jpg");
+  background-image:  url(${banner});
   background-size: cover;
   background-position: center;
   display: flex;
