@@ -42,7 +42,11 @@ export default function Form() {
     setNome(e.target.value);
   }
 
-  const calcImc = () => {
+  const calcImc = (e) => {
+    if (peso === 0 || altura === 0 || nome === "") {
+      alert("Preencha o formulário corretamente!");
+      e.preventDefault();
+    }
     if (peso && altura) {
       const pesoRes = parseFloat(peso.replace(",", "."));
       const alturaRes = parseFloat(altura.replace(",", "."));
@@ -103,6 +107,7 @@ export default function Form() {
               }
             />
           </Data>
+
           <Link
             onClick={calcImc}
             to="/resultado"
